@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+/* Set custome font family */
+@font-face {
+    font-family: 'CustomeHeading';
+    src: url('./fonts/SFAtarianSystem.ttf') format('embedded-opentype'), /* Internet explorer */
+         url('./fonts/SFAtarianSystem.ttf') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/SFAtarianSystem.ttf') format('woff'), /* Pretty Modern Browsers */
+         url('./fonts/SFAtarianSystem.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/SFAtarianSystem.ttf') format('svg'); /* Legacy iOS */
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Whole Doc */
+body{
+    background-color: #FA7A4F;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Container */
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----Heading---- */
+.head{
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.head h2{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'CustomeHeading', sans-serif;
+}
+
+/* ----Logo---- */
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 110px;
+}
+
+/* ----Card---- */
+.card{
+    width: 435px;
+    height: 440px;
+    background: #121212;
+    border: 9px solid #FF3E00;
+    border-radius: 30%;
+    overflow: hidden;
+}
+
+/* --Tabs-- */
+.card .tabs{
+    width: 100%;
+}
+
+.card .tabs .btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    overflow: hidden;
+    padding: 25px 50px;
+}
+
+.card .tabs .btns > *{
+    flex: 1;
+    text-align: center;
+    line-height: 70px;
+}
+
+.card .tabs .btns a,
+.card .tabs .btns a label{
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+
+.card .tabs .btns .si a label{
+    color: #FF3E00;
+}
+
+/* Set Underline for Tabs */
+.card .tabs .btns .si .highlightersi,
+.card .tabs .btns .su .highlightersu{
+    position: relative;
+    color: #ff3e00;
+    font-weight: 700;
+    transition: all 0.4s ease-in;
+}
+
+.card .tabs .btns .si .highlightersi::before,
+.card .tabs .btns .su .highlightersu::before{
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: #ff3e00;
+    border-radius: 99px 99px 0 0;
+    content: "";
+    bottom: 0;
+    left: 0;
+}
+
+.card .tabs .btns .su .highlightersu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Hide Radio Buttons */
+#tog1,
+#tog2{
+    display: none;
+}
+
+/* Toggle Tab Underline */
+#tog2:checked ~ .tabs > .btns > .si > .highlightersi{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#tog2:checked ~ .tabs > .btns > .si > a > label{
+    color: #fff;
+}
+
+#tog2:checked ~ .tabs > .btns > .su > .highlightersu{
+    opacity: 1;
+    visibility: visible;
+}
+
+#tog2:checked ~ .tabs > .btns > .su > a > label{
+    color: #FF3E00;
+}
+
+/* Line Border */
+.card .tabs .line{
+    width: 100%;
+    background: #707070;
+    height: 1px;
+}
+
+/* --Form Sections (Common)-- */
+.card .frms form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: all 0.3s ease-in;
+}
+
+/* Input Elements */
+.card .frms form .ui{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .frms form .ui input{
+    width: 280px;
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 50px;
+    font-size: 1.1rem;
+    border: none;
+    background: #1C1C1C;
+    color: #fff;
+}
+
+.card .frms form img{
+    width: 20px;
+    position: absolute;
+    left: 50px;
+}
+
+/* Form Buttons */
+.card .frms form .fbtns{
+    text-decoration: none;
+    background: #ff3e00;
+    padding: 14px 52px;
+    display: block;
+    border-radius: 12px;
+    color: #ece1de;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.card .frms form .fbtns:hover{
+    background: #fa7a4f;
+    color: #1C1C1C;
+}
+
+/* Only Sign In Form */
+/* Remember Me */
+.card .frms .sifrm .remember{
+    width: 100%;
+    position: relative;
+    left: 30px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.card .frms .sifrm .remember input{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.card .frms .sifrm .remember span{
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    color: #979797;
+}
+
+.card .frms .sifrm .remember span:before{
+    content: "";
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+    border-radius: 6px;
+    background: #1C1C1C;
+    transition: all 0.3s ease-in;
+}
+
+.card .frms .sifrm .remember:hover input ~ span:before{
+    background: #383838;
+}
+
+.card .frms .sifrm .remember input:checked ~ span:before{
+    background-image: url(./img/checked.png);
+    background-size: cover;
+}
+
+/* Forget Pass */
+.card .frms .sifrm .forgot{
+    margin-top: 10px;
+}
+.card .frms .sifrm .forgot a{
+    text-decoration: none;
+    color: #979797;
+}
+
+/* Only Sign Up Form */
+.card .frms .sufrm{
+    bottom: 345px;
+    left: -100%;
+}
+
+/* Toggle Forms */
+#tog2:checked ~ .frms > .sifrm{
+    right: -100%;
+}
+
+#tog2:checked ~ .frms > .sufrm{
+    left: 0;
+}
+
+#tog1:checked ~ .frms > .sifrm{
+    right: 0;
+}
+
+

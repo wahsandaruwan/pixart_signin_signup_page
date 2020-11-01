@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixArt Studios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        
+        <!-- Heading -->
+        <div class="head">
+            <h2>PixArt Studios</h2>
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./img/logo.svg" alt="">
+        </div>
+        <!-- Card for Forms -->
+        <div class="card">
+            <!-- For Tab Toggle -->
+            <input type="radio" id="tog1" name="select">
+            <input type="radio" id="tog2" name="select">
+            <!-- Tabs -->
+            <div class="tabs">
+                <!-- Buttons -->
+                <div class="btns">
+                    <div class="si">
+                        <a href="#" class="signin"><label for="tog1">Sign In</label></a>
+                        <div class="highlightersi"></div>
+                    </div>
+                    <div class="su">
+                        <a href="#" class="signup"><label for="tog2">Sign Up</label></a>
+                        <div class="highlightersu"></div>
+                    </div>
+                </div>
+                <!-- Line -->
+                <div class="line"></div>
+            </div>
+
+            <!-- Form Sections -->
+            <div class="frms">
+                <!-- Sign In Form -->
+                <form class="sifrm">
+                    <div class="ui">
+                        <input type="text" placeholder="Your Username">
+                        <img src="./img/username.svg" alt="">
+                    </div>
+                    <div class="ui">
+                        <input type="password" placeholder="Your Password">
+                        <img src="./img/password.svg" alt="">
+                    </div>
+                    <label class="remember">
+                        <input type="checkbox">
+                        <span>Remember Me</span>
+                    </label>
+                    <a href="#" class="fbtns">Sign In</a>
+                    <label class="forgot">
+                        <a href="">Forget Password?</a>
+                    </label>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form class="sufrm">
+                    <div class="ui">
+                        <input type="text" placeholder="Your Username">
+                        <img src="./img/username.svg" alt="">
+                    </div>
+                    <div class="ui">
+                        <input type="email" placeholder="Your Email">
+                        <img src="./img/email.svg" alt="">
+                    </div>
+                    <div class="ui">
+                        <input type="password" placeholder="Your Password">
+                        <img src="./img/password.svg" alt="">
+                    </div>
+                    <a href="#" class="fbtns">Sign Up</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
