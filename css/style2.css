@@ -1,11 +1,6 @@
 /* ----For Profile Page---- */
 /* ------------------------ */
 
-/* ------Container------ */
-.container{
-    padding-bottom: 0 0 10px 0;
-}
-
 /* ----Bar---- */
 .bar{
     width: 320px;
@@ -37,7 +32,7 @@
     margin: 0 auto;
 }
 
-.pbtns .dash, 
+.pbtns .dash,
 .pbtns .lgo{
     display: block;
     background: #FF3E00;

@@ -154,7 +154,7 @@
     border-radius: 12px;
     color: #ece1de;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.1rem;
     cursor: pointer;
     text-align: center;
     transition: all 0.3s ease-in;
@@ -168,10 +168,10 @@
 /* Only Sign In Form */
 /* Remember Me */
 .card .frms .sifrm .remember{
-    width: 100%;
+    width: 80%;
     position: relative;
     left: 30px;
-    margin: 10px 0;
+    margin: 10px auto 10px 0;
     cursor: pointer;
 }
 
@@ -184,9 +184,9 @@
 }
 
 .card .frms .sifrm .remember span{
-    align-items: center;
     display: flex;
-    font-size: 16px;
+    align-items: center;
+    font-size: 1rem;
     color: #979797;
 }
 
@@ -209,7 +209,7 @@
     background-size: cover;
 }
 
-/* Forget Pass */
+/* Forget Password */
 .card .frms .sifrm .forgot{
     margin-top: 10px;
 }
@@ -239,17 +239,21 @@
 
 /* ----Responsive---- */
 @media(max-width: 580px){
+    /* ----Card---- */
     .card{
-        width: 300px;
+        width: 310px;
     }
 
+    /* --Form Section(Common)-- */
     .card .frms form .ui{
-        padding-left: 15px;
+        padding: 0 20px;
     }
 
     .card .frms form img{
         left: 0px;
     }
+
+    .card .frms form .ui input{
+        padding-left: 65px
+    }
 }
-
-

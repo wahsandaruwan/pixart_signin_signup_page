@@ -23,6 +23,7 @@ body{
     background-color: #FA7A4F;
     display: flex;
     justify-content: center;
+    padding: 30px;
 }
 
 /* ------Container------ */
